@@ -36,6 +36,8 @@ body .container {
   color: var(--white-main-heading-stats);
   display: flex;
   font-family: var(--ff-inter);
+  overflow: hidden;
+  border-radius: 10px;
 }
 body .container .item-1 {
   width: 50%;
@@ -79,10 +81,12 @@ body .container .item-1 ul li .stat-name {
   color: var(--white-stat-headings);
 }
 body .container .item-2 {
+  background-color: var(--violet-accent-color);
   width: 50%;
   height: 100%;
 }
 body .container .item-2 img {
+  opacity: 0.4;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -93,15 +97,19 @@ ul {
 }
 
 @media (max-width: 755px) {
+  .body {
+    padding: 0 !important;
+  }
+
   .container {
     background-color: var(--card-background-color);
     min-width: 350px !important;
-    overflow-y: auto;
+    max-width: 350px !important;
+    overflow-y: hidden;
     color: var(--white-main-heading-stats);
     display: flex;
     flex-direction: column-reverse;
     font-family: var(--ff-inter);
-    margin: 20px;
   }
   .container .item-1 {
     text-align: center;
@@ -146,10 +154,12 @@ ul {
     color: var(--white-stat-headings);
   }
   .container .item-2 {
+    background-color: var(--violet-accent-color);
     width: 100% !important;
     height: 100%;
   }
   .container .item-2 img {
+    opacity: 0.4;
     height: 100%;
     width: 100%;
     object-fit: cover;
